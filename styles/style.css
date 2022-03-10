@@ -1,0 +1,258 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;} 
+/* end snippet */
+
+h1,
+p { 
+	padding: 0; 
+	margin: 0; 
+}
+
+html { 
+	font-size: 62.5%; /* 10px */ 
+}
+
+body {
+	height: 100%;
+  background: radial-gradient(circle, #ECF1F4, #e0dace); 
+	-webkit-background: radial-gradient(circle, #ECF1F4, #e0dace);
+}
+
+/* Outer gameplay container */
+.container {
+	height: 350px;
+	width: 600px;
+	background-color: #5A5483;
+	margin: 50px auto;
+	border-radius: 15px;
+	position: relative;
+}
+
+h1 {
+	color: #d6d4dd;
+	text-align: center;
+	font-weight: bold;
+	font-size: 4rem;
+	padding: 15px 0px;
+}
+
+/* Questions  */
+.questionsContainer {
+	height: 80px;
+	width: 450px;
+	text-align: center;
+	font-size: 2.5rem;
+	color: white;
+	background-color: #02A4AD;
+	border-radius: 10px;
+	padding-top: 10px;
+	margin-left: 65px;
+}
+
+.question {
+	display: none;
+}
+
+/* Answer input styling */
+.answerInput {
+	margin-left: 150px;
+	margin-top: 15px;
+	font-size: 1.5rem;
+	width: 285px;
+	height: 35px;
+	text-align: center;
+	display: none;
+}
+
+.zeroInput {
+	display: block;
+}
+
+/* Submit button */
+.submit {
+	height: 43px;
+	width: 135px;
+	border-radius: 5px;
+	padding: 8px;
+	font-size: 1.7rem;
+	position: absolute;
+	left: 225px;
+	top: 250px;
+}
+
+
+/* End of Game */
+.score {
+	height: 250px;
+	width: 500px;
+	background: linear-gradient(#F19A05, #D4441C);
+	-webkit-background: linear-gradient(#F19A05, #D4441C);
+	top: 70px;
+	left: 50px;
+	position: absolute;
+	z-index: 10;
+	display: none;
+	color: white;
+	font-size: 3rem;
+	text-align: center;
+}
+
+.endScreen {
+	margin-top: 35px;
+}
+
+.answers {
+	display: none;
+	height: 43px;
+	width: 135px;
+	border-radius: 5px;
+	padding: 8px;
+	font-size: 1.5rem;
+	position: absolute;
+	left: 225px;
+	top: 250px;
+	z-index: 10;
+}
+
+/* Correct and player answers */
+.resultsDisplay {
+	display: none;
+	position: relative;
+	top: -310px;
+	left: 400px;
+	width: 400px;
+	height: 220px;
+	background-color: #02A4AD;
+	border-radius: 10px;
+}
+
+table {
+	font-size: 2rem;
+	color: white;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-left: 5px;
+}
+
+
+/* Resizing for small devices */
+@media (max-width: 768px){
+	#container
+	{
+		height: 450px;
+		width: 400px;
+		background-color: #5A5483;
+		margin: 50px auto;
+		border-radius: 15px;
+		position: relative;
+	}
+
+	#header
+	{
+		color: #d6d4dd;
+		text-align: center;
+		font-weight: bold;
+		font-size: 3em;
+		padding: 15px 5px;
+	}
+
+	#questionscontainer
+	{
+		height: 150px;
+		width: 370px;
+		text-align: center;
+		font-size: 1.5em;
+		color: white;
+		background-color: #02A4AD;
+		border-radius: 10px;
+		padding-top: 10px;
+		margin-left: 15px;
+	}
+
+	/* Answer input styling */
+	.answer
+	{
+		position: relative;
+		top: -90px;
+		left: -120px;
+		width: 330px;
+		height: 25px;
+		text-align: center;
+	}
+
+	#button
+	{
+		height: 43px;
+		width: 134.5px;
+		border-radius: 5px;
+		padding: 8px;
+		font-size: 20px;
+		position: relative;
+		left: 130px;
+		top: -20px;
+	}
+
+	#score
+	{
+		height: 250px;
+		width: 400px;
+		background: linear-gradient(#F19A05, #D4441C);
+		-webkit-background: linear-gradient(#F19A05, #D4441C);
+		-o-background: linear-gradient(#F19A05, #D4441C);
+		-moz-background: linear-gradient(#F19A05, #D4441C);
+		top: 140px;
+		left: 0px;
+		position: absolute;
+		z-index: 2;
+		display: none;
+		color: white;
+		font-size: 4em;
+		text-align: center;
+	}
+
+	/* Show answers button */
+	#answers
+	{
+		display: none;
+		height: 43px;
+		width: 134.5px;
+		border-radius: 5px;
+		padding: 8px;
+		font-size: 15px;
+		position: absolute;
+		left: 130px;
+		top: 395px;
+		z-index: 2;
+	}
+
+/* Correct and player answers */
+#resultsDisplay
+	{
+		display: none;
+		width: 245px;
+		height: 300px;
+		background-color: #02A4AD;
+		border-radius: 10px;
+		position: relative;
+		top: -365px;
+		left: 85px;
+	}
+
+
+	table
+	{
+		font-size: 15px;
+		color: white;
+		padding-right: 15px;
+		padding-top: 10px;
+		padding-left: 5px;
+	}
+
+}
