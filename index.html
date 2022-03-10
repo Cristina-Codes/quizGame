@@ -13,40 +13,46 @@
 
 <body>
 	<!-- Introduction -->
-	<main class="container">
-		<h1>Do you know your stuff?</h1>
+	<main>
+		<section class="container">
+			<h1>Do you know your stuff?</h1>
 
-		<!-- Quiz container -->
-		<section id="questionsContainer" class="questionsContainer">
-			<p id="doya">Well, do ya?</p>
-			<p id="q1" class="question">What does “www” stand for in a website browser?</p>
-			<p id="q2" class="question">What geometric shape is generally used for stop signs?</p> 
-			<p id="q3" class="question">Who was the first woman to win a Nobel Prize (in 1903)?</p> 
-			<p id="q4" class="question">What is the most consumed manufactured drink in the world?</p>
-			<p id="q5" class="question">Which country invented ice cream?</p>
-			<p id="q6" class="question">Dump, floater, and wipe are terms used in which team sport?</p>  
+			<!-- Quiz container -->
+			<section id="questionsContainer" class="questionsContainer">
+				<p id="doya">Well, do ya?</p>
+				<p id="q1" class="question">What does “www” stand for in a website browser?</p>
+				<p id="q2" class="question">What geometric shape is generally used for stop signs?</p> 
+				<p id="q3" class="question">Who was the first woman to win a Nobel Prize (in 1903)?</p> 
+				<p id="q4" class="question">What is the most consumed manufactured drink in the world?</p>
+				<p id="q5" class="question">Which country invented ice cream?</p>
+				<p id="q6" class="question">Dump, floater, and wipe are terms used in which team sport?</p>  
+
+			<!-- Input and ID for each answer -->
+				<input id="guess" class="answerInput zeroInput" maxlength="0"></input>
+				<input id="guess1" class="answerInput" maxlength="15"></input>
+				<input id="guess2" class="answerInput" maxlength="15"></input>
+				<input id="guess3" class="answerInput" maxlength="15"></input>
+				<input id="guess4" class="answerInput" maxlength="15"></input>
+				<input id="guess5" class="answerInput" maxlength="15"></input>
+				<input id="guess6" class="answerInput" maxlength="15"></input>
+			</section><!-- .questionsContainer END -->
+
+			<!-- Start game -->
+			<button id="button" class="submit" type="submit">Start</button>
+			
+
+			<!-- Score -->
+			<div id="score" class="score"></div>
+			<button id='answers' class="answers" type='submit'>See Answers</button>
+			
+
+			<!-- End of game results display -->
+			<div id="resultsDisplay" class="resultsDisplay"></div>
 		</section>
-
-		<!-- Input and ID for each answer -->
-		<input id="guess" class="answerInput zeroInput" maxlength="0"></input>
-		<input id="guess1" class="answerInput" maxlength="14"></input>
-		<input id="guess2" class="answerInput" maxlength="7"></input>
-		<input id="guess3" class="answerInput" maxlength="11"></input>
-		<input id="guess4" class="answerInput" maxlength="3"></input>
-		<input id="guess5" class="answerInput" maxlength="5"></input>
-		<input id="guess6" class="answerInput" maxlength="10"></input>
-
-<!-- Score -->
-		<div id="score" class="score"></div>
-
-<!-- Start game -->
-		<button id="button" class="submit" type="submit">Start</button>
-		<button id='answers' class="answers" type='submit'>See Answers</button>
 	</main>
 
 
-<!-- End of game results display -->
-	<div id="resultsDisplay" class="resultsDisplay"></div>
+
 <script src="./scripts.js"></script>
 </body>
 </html>
