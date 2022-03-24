@@ -72,7 +72,7 @@ document.getElementById("button").onclick=function() {
 		hide('button');
 		show("score");
 		show('answers');
-		document.getElementById("score").innerHTML = "<p class='endScreen'>Whoa!</p>" + "<p>Your score is: " + actualScore + "/6</p>";
+		document.getElementById("score").innerHTML = `<p class='endScreen'>Whoa!</p><p>Your score is:  ${actualScore}/6</p>`;
   }
 }
 
@@ -81,18 +81,12 @@ document.getElementById("answers").onclick=function() {
 	if($(window).width() > 767) {
 		hide('answers');
 		hide('score');
-		document.getElementById('resultsDisplay').innerHTML = "<table><tr><thead><td>Correct Answers</td><td>Your Answers</td></thead></tr>" + 
-		"<tr><td><ol><li>World Wide Web</li><li>Octagon</li><li>Marie Curie</li><li>Tea</li><li>China</li><li>Volleyball</li></ol></td>" +
-		"<td><ol><li>" + answersArray[0] + "</li><li>" + answersArray[1] + "</li><li>" + answersArray[2] + "</li><li>" + answersArray[3] + 
-		"</li><li>" + answersArray[4] + "</li><li>" + answersArray[5] + "</li></ol></td></tr></table>"
+		document.getElementById('resultsDisplay').innerHTML = `<table><tr><thead><td>Correct Answers</td><td>Your Answers</td></thead></tr><tr><td><ol><li>World Wide Web</li><li>Octagon</li><li>Marie Curie</li><li>Tea</li><li>China</li><li>Volleyball</li></ol></td><td><ol><li>${answersArray[0]}</li><li>${answersArray[1]}</li><li>${answersArray[2]}</li><li>${answersArray[3]}</li><li>${answersArray[4]}</li><li>${answersArray[5]}</li></ol></td></tr></table>`
 		show('resultsDisplay');
 }else{
 		hide('answers');
 		hide('score');
-		document.getElementById('resultsDisplay').innerHTML = "<table><tr><td>Correct Answers</td></tr><tr>" +
-		"<td><ol><li>World Wide Web</li><li>Octagon</li><li>Marie Curie</li><li>Tea</li><li>China</li><li>Volleyball</li></ol></td>" +
-		"</tr><tr><td>Your Answers</td></tr><tr><td><ol><li>" + answersArray[0] + "</li><li>" + answersArray[1] + "</li><li>" + answersArray[2] + 
-		"</li><li>" + answersArray[3] + "</li><li>" + answersArray[4] + "</li><li>" + answersArray[5] + "</li></ol></td></tr></table>"
+		document.getElementById('resultsDisplay').innerHTML = `<table><tr><td>Correct Answers</td></tr><tr><td><ol><li>World Wide Web</li><li>Octagon</li><li>Marie Curie</li><li>Tea</li><li>China</li><li>Volleyball</li></ol></td></tr><tr><td>Your Answers</td></tr><tr><td><ol><li>${answersArray[0]}</li><li>${answersArray[1]}</li><li>${answersArray[2]}</li><li>${answersArray[3]}</li><li>${answersArray[4]}</li><li>${answersArray[5]}</li></ol></td></tr></table>`  //reworking using to-do app logic - createElement, appendChild
 		show('resultsDisplay');
 }
 };

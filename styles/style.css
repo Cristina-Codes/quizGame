@@ -77,6 +77,10 @@ h1 {
 	display: block;
 }
 
+input:disabled {
+	background: rgb(196, 196, 196);
+}
+
 /* Buttons */
 button {
 	border-radius: 5px;
