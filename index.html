@@ -6,8 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quiz Game</title>
 
+<!-- jQuery -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
 <!-- Styling -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="./styles/style.css">
 </head>
 
@@ -19,35 +20,28 @@
 
 			<!-- Quiz container -->
 			<section id="questionsContainer" class="questionsContainer">
-				<p id="doya">Well, do ya?</p>
-				<p id="q1" class="question">What does “www” stand for in a website browser?</p>
-				<p id="q2" class="question">What geometric shape is generally used for stop signs?</p> 
-				<p id="q3" class="question">Who was the first woman to win a Nobel Prize (in 1903)?</p> 
-				<p id="q4" class="question">What is the most consumed manufactured drink in the world?</p>
-				<p id="q5" class="question">Which country invented ice cream?</p>
-				<p id="q6" class="question">Dump, floater, and wipe are terms used in which team sport?</p>  
+				<p id="questions">Well, do ya?</p>
 
 			<!-- Input and ID for each answer -->
-				<input id="guess" class="answerInput zeroInput" disabled></input>
-				<input id="guess1" class="answerInput" maxlength="15"></input>
-				<input id="guess2" class="answerInput" maxlength="15"></input>
-				<input id="guess3" class="answerInput" maxlength="15"></input>
-				<input id="guess4" class="answerInput" maxlength="15"></input>
-				<input id="guess5" class="answerInput" maxlength="15"></input>
-				<input id="guess6" class="answerInput" maxlength="15"></input>
+				<input id="guess" class="zeroInput" maxlength="15" disabled></input>
 			</section><!-- .questionsContainer END -->
 
 			<!-- Start game -->
-			<button id="button" class="submit" type="submit">Start</button>
+			<button id='startGame' class='submit' type='submit'>Start Game!</button>
+
+			<!-- Submit answer -->
+			<button id='submitAnswer' class='hidden submit' type='submit'>Final Answer</button>
 			
 
 			<!-- Score -->
-			<div id="score" class="score"></div>
-			<button id='answers' class="answers" type='submit'>See Answers</button>
-			
+			<div id='score' class='score'></div>
 
-			<!-- End of game results display -->
-			<div id="resultsDisplay" class="resultsDisplay"></div>
+			<button id='showAnswers' class='answers' type='submit'>See Answers</button>
+			
+			
+			<div id="resultsDisplay" class="resultsDisplay">
+				<!-- End of game results display -->
+			</div>
 		</section>
 	</main>
 
